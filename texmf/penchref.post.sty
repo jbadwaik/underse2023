@@ -1,0 +1,19 @@
+% --------------------------------------------------------------------------------------------------
+% SPDX-License-Identifier: Apache-2.0
+% SPDX-FileCopyrightText: (C) 2021-2021, Jayesh Badwaik <jayesh@badwaik.dev>
+% --------------------------------------------------------------------------------------------------
+\ProvidesPackage{penchref.post}
+
+\makeatletter
+\hypersetup{
+  keeppdfinfo,
+  colorlinks=true,
+  urlcolor=\penchurlcolor,
+  linkcolor=\penchlinkcolor,
+  citecolor=\penchcitecolor,
+  pdftitle={\@title},
+  pdfauthor={\@author},
+  pdfsubject={\@subject}
+}
+\makeatother
+

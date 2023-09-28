@@ -1,0 +1,26 @@
+% --------------------------------------------------------------------------------------------------
+% SPDX-License-Identifier: Apache-2.0
+% SPDX-FileCopyrightText: (C) 2021-2021, Jayesh Badwaik <jayesh@badwaik.dev>
+% --------------------------------------------------------------------------------------------------
+\ProvidesPackage{penchbeamer.ref}
+\RequirePackage{hyperref}
+
+\PassOptionsToPackage{
+  hypertexnames=true,
+  plainpages=false,
+  pdfpagelabels,
+  pagebackref,
+}
+{hyperref}
+
+\providecommand{\penchurlcolor}{Sepia}
+\providecommand{\penchlinkcolor}{MidnightBlue}
+\providecommand{\penchcitecolor}{ForestGreen}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=\penchurlcolor,
+  linkcolor=\penchlinkcolor,
+  citecolor=\penchcitecolor,
+}
+

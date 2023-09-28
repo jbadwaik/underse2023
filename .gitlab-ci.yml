@@ -1,0 +1,14 @@
+# --------------------------------------------------------------------------------------------------
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-FileCopyrightText: (C) 2021-2021, Jayesh Badwaik <jayesh@badwaik.dev>
+# --------------------------------------------------------------------------------------------------
+pdf:
+  image: texlive/texlive
+  tags: ["docker"]
+  script:
+    - make verbose
+  artifacts:
+    expire_in: never
+    paths:
+      - "*.pdf"
+

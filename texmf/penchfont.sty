@@ -1,0 +1,45 @@
+% --------------------------------------------------------------------------------------------------
+% SPDX-License-Identifier: Apache-2.0
+% SPDX-FileCopyrightText: (C) 2021-2021, Jayesh Badwaik <jayesh@badwaik.dev>
+% --------------------------------------------------------------------------------------------------
+\ProvidesPackage{penchfont}
+
+\RequirePackage{fontspec}
+\RequirePackage{microtype}
+\PassOptionsToPackage{final}{microtype}
+
+\RequirePackage{unicode-math}
+
+
+\setmainfont[ItalicFont={Linux Libertine O Italic}]{Alegreya}
+
+
+
+\setmathfont
+[
+%math-style=upright
+Scale=MatchLowercase
+]
+{Latin Modern Math}
+
+\setmathfont
+[
+range={bb},
+Scale=MatchLowercase
+]{TeX Gyre Pagella Math}
+
+\setmathfont
+[
+range={scr,bfscr},
+Scale=MatchLowercase
+]{Tex Gyre Bonum Math}
+
+\setmathfont
+[
+range=\setminus,
+Scale=MatchLowercase,
+]{XITS Math}
+
+\newcommand{\inlinecode}[1]{\textcolor{RawSienna}{\texttt{#1}}}
+\linespread{1.2}
+

@@ -1,0 +1,47 @@
+% --------------------------------------------------------------------------------------------------
+% SPDX-License-Identifier: Apache-2.0
+% SPDX-FileCopyrightText: (C) 2021-2021, Jayesh Badwaik <jayesh@badwaik.dev>
+% --------------------------------------------------------------------------------------------------
+\ProvidesPackage{penchenv}
+\RequirePackage{newfloat}
+\RequirePackage{caption}
+\RequirePackage{float}
+
+
+\PassOptionsToPackage{labelfont={bf,sf},labelsep=space}{caption}
+
+\makeatletter
+\@ifclassloaded{pencharticle}
+{
+  \DeclareFloatingEnvironment[fileext=frm,placement={!ht},name=Equation]{eqfloat}
+}
+{
+  \DeclareFloatingEnvironment[fileext=frm,placement={!ht},name=Equation,within=chapter]{eqfloat}
+}
+\makeatother
+
+\captionsetup[eqfloat]{labelfont=bf}
+
+\NewDocumentEnvironment{eqcap}{m}
+{
+  \begin{eqfloat}[H]
+  }
+  {
+    \caption{#1}
+  \end{eqfloat}
+}
+
+
+\NewDocumentEnvironment{framedeqcap}{m}
+{
+  \begin{eqfloat}[H]
+    \begin{mdframed}[roundcorner=5pt,linewidth=1pt]
+    }
+    {
+      \caption{#1}
+    \end{mdframed}
+  \end{eqfloat}
+}
+
+
+
